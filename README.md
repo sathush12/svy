@@ -55,7 +55,7 @@ The svy ecosystem is being built to support:
 - Replication methods (BRR, bootstrap, jackknife)
 - Small Area Estimation (area- and unit-level models)
 - Explicit, inspectable, reproducible outputs
-- Integration with pandas, NumPy, SciPy, and JAX-based tooling
+- Integration with Polars, NumPy, SciPy, and JAX-based tooling
 
 All methods are grounded in established survey methodology.
 
