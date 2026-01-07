@@ -69,6 +69,10 @@ It reflects the current design but **cannot yet be run** until the first release
 ### Design-based estimation
 
 ```python
+pip install svy
+```
+
+```python
 import svy
 
 hld_data = svy.load_dataset(name="hld_sample_wb_2023", limit=None)
@@ -83,6 +87,10 @@ print(tot_exp_mean)
 ```
 
 ### Fay Herriot Model - SAE
+
+```python
+pip install svy-sae
+```
 
 ```python
 import svy_sae as sae
