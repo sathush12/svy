@@ -83,6 +83,16 @@ impl Link {
         }
     }
 
+    fn link(&self, mu: f64) -> f64 {
+        match self {
+            Link::Identity => mu,
+            Link::Logit => (mu / (1.0 - mu)).ln(),
+            Link::Log => mu.max(1e-10).ln(),
+            Link::Inverse => 1.0 / mu,
+            Link::InverseSquared => 1.0 / (mu * mu),
+        }
+    }
+
     fn inverse(&self, eta: f64) -> f64 {
         match self {
             Link::Identity => eta,
@@ -425,8 +435,9 @@ pub fn fit_glm(
     };
 
     for i in 0..n {
-        mu[i] = family.initial_mu(y_bar);
-        eta[i] = 0.0;
+        let y_i = Y.read(i, 0);
+        mu[i] = family.initial_mu(y_i);
+        eta[i] = link.link(mu[i]);       // Initialize eta = g(mu)
     }
 
     // work arrays
@@ -443,7 +454,7 @@ pub fn fit_glm(
         iter_count += 1;
 
         // 1) eta/mu from current beta
-        {
+        if iter > 0 {
             let pred = &X * &beta;
             for i in 0..n {
                 eta[i] = pred.read(i, 0);
